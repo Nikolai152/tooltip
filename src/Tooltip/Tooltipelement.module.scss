@@ -1,0 +1,60 @@
+.tooltipContent {
+  padding: 16px;
+  background: #fff;
+  color: black;
+  border-radius: 4px;
+}
+
+.tooltipHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 16px;
+  margin-bottom: 16px;
+}
+
+.tooltipRow {
+  display: flex;
+  align-items: center;
+  gap: 33px;
+  height: 16px;
+  margin-top: 8px;
+}
+
+.tooltipRowInner {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 16px;
+}
+
+.tooltipRowCircle {
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  margin: 2px;
+}
+
+.tooltipRowTitle {
+  width: 160px;
+  white-space: nowrap;
+  height: 16px;
+}
+.tooltipWindow {
+  position: "fixed";
+  border: 1px solid black;
+  border-radius: 4px;
+  z-index: 2;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    margin-left: -5px;
+    border: 5px solid transparent;
+    border-top: 5px solid black;
+    border-top-color: white;
+  }
+}

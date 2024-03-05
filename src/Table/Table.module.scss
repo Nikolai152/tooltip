@@ -1,0 +1,20 @@
+.table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.cell {
+  width: 100px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.numberOfCell {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
