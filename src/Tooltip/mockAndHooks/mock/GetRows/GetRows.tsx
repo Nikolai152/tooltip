@@ -1,10 +1,10 @@
-import styles from "./Table.module.scss";
+import styles from "./GetRows.module.scss";
 
-const getRandomAtribute = () => {
+const getRandomAtribute = (): boolean => {
   return Math.random() > 0.5;
 };
 
-export const getRows = (tooltipClassName: string) => {
+export const GetRows = (tooltipClassName: string) => {
   const rows = [];
 
   for (let i = 0; i < 2; i++) {
@@ -29,13 +29,17 @@ export const getRows = (tooltipClassName: string) => {
           data-tooltip-props={tooltipPropsLikeString}
         >
           <div className={styles.numberOfCell}>
-            {tooltipProps.marked !== undefined && <p>{tooltipProps.marked}</p>}
-            {tooltipProps.agreed !== undefined && <p>{tooltipProps.agreed}</p>}
+            {tooltipProps.marked !== undefined && (
+              <span>{tooltipProps.marked}</span>
+            )}
+            {tooltipProps.agreed !== undefined && (
+              <span>{tooltipProps.agreed}</span>
+            )}
             {tooltipProps.distributed !== undefined && (
-              <p>{tooltipProps.distributed}</p>
+              <span>{tooltipProps.distributed}</span>
             )}
             {tooltipProps.suggestedByKernel !== undefined && (
-              <p>{tooltipProps.suggestedByKernel}</p>
+              <span>{tooltipProps.suggestedByKernel}</span>
             )}
           </div>
         </td>

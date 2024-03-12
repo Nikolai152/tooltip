@@ -1,0 +1,19 @@
+.tooltipWindow {
+  cursor: pointer;
+  position: fixed;
+  border-radius: 4px;
+  z-index: 2;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  transform: translateY(-4px);
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    margin-left: -5px;
+    border: 5px solid transparent;
+    border-top: 5px solid white;
+  }
+}
+
