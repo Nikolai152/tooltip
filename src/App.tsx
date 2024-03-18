@@ -1,13 +1,13 @@
-import React from "react";
 import './App.css';
-import { Table } from './Tooltip/mockAndHooks/mock/Table/Table'
-import { GetRows } from './Tooltip/mockAndHooks/mock/GetRows/GetRows'
+
+import { Rows } from './Table/mock/Rows/Rows';
+import { Table } from './Table/Tooltip/Tooltip.stories';
 
 function App() {
   return (
     <div className="App">
       <div>
-      <Table tooltipClassName="tooltip" rows={GetRows('tooltip')} />
+        <Table tooltipClassName="tooltip" rows={Rows('tooltip')} />
       </div>
     </div>
   );

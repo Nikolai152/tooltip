@@ -1,6 +1,11 @@
 import { MutableRefObject, useCallback, useRef } from 'react';
 
-const useDebounce = (callback: (...args: any[]) => void, delay: number) => {
+// eslint-disable @typescript-eslint/no-explicit-any
+
+const useEventDebounce = (
+  callback: (...args: any[]) => void,
+  delay: number,
+) => {
   const timer = useRef() as MutableRefObject<any>;
 
   return useCallback(
@@ -12,8 +17,8 @@ const useDebounce = (callback: (...args: any[]) => void, delay: number) => {
         callback(...args);
       }, delay);
     },
-    [callback, delay]
+    [callback, delay],
   );
-}
+};
 
-export default useDebounce
+export default useEventDebounce;
